@@ -16,7 +16,7 @@
 
         .container {
             margin-top: 50px;
-            margin-bottom: 50px;
+            margin-bottom: 25px;
         }
 
         .translation-box {
@@ -24,6 +24,9 @@
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .translation-box h4 {
+            font-weight: 700;
         }
 
         .btn-translate {
@@ -55,6 +58,27 @@
 
         .form-label {
             font-weight: bold;
+        }
+
+        .footer {
+            color: var(--primary-color-dark);
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            margin-top: 15px;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #001da0;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+            color: #007bff;
         }
     </style>
 </head>
@@ -103,7 +127,7 @@
                 <label for="igboText" class="form-label">Enter Igbo Text:</label>
                 <input type="text" class="form-control" id="igboText" placeholder="Type Igbo text here...">
             </div>
-            <button class="btn btn-secondary btn-translate mt-2" onclick="translateText('igbo', 'from')">Translate to English</button>
+            <button class="btn btn-translate mt-2 eng-translation" onclick="translateText('igbo', 'from')">Translate to English</button>
             <div class="translation-result">
                 <label for="igboToEnglish" class="form-label">English Translation:</label>
                 <input class="form-control" id="igboToEnglish" readonly />
@@ -127,11 +151,15 @@
                 <label for="hausaText" class="form-label">Enter Hausa Text:</label>
                 <input type="text" class="form-control" id="hausaText" placeholder="Type Hausa text here...">
             </div>
-            <button class="btn btn-secondary btn-translate mt-2" onclick="translateText('hausa', 'from')">Translate to English</button>
+            <button class="btn btn-translate mt-2 eng-translation" onclick="translateText('hausa', 'from')">Translate to English</button>
             <div class="translation-result">
                 <label for="hausaToEnglish" class="form-label">English Translation:</label>
                 <input class="form-control" id="hausaToEnglish" readonly />
             </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> Developed by <a href="https://michaeltobba.netlify.app" target="_blank">Michael</a>. <br> All rights reserved.</p> 
         </div>
     </div>
 
